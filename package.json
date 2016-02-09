@@ -1,0 +1,23 @@
+{
+  "name": "firebase-material",
+  "version": "1.0.0",
+  "description": "Firebase and Angular Material sandbox",
+  "main": "index.js",
+  "scripts": {
+    "clean": "> www/dist.js",
+    "bundle": "browserify www/app.js -o www/dist.js",
+    "watch": "watchify www/app.js -o www/dist.js",
+    "start": "npm run clean && npm run watch"
+  },
+  "keywords": [
+    "firebase",
+    "angular",
+    "material"
+  ],
+  "author": "Jordan Bisasky",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "express": "^4.13.4"
+  }
+}

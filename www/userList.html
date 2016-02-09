@@ -1,0 +1,6 @@
+<h2>List of Users</h2>
+<div ng-repeat='user in vmc.users'>
+  <input ng-model='user.data.name' ng-change='vmc.updateUser(user)'/>
+  <input ng-model='user.data.email' ng-change='vmc.updateUser(user)'/>
+  <md-button ng-click='vmc.deleteUser(user)'>Delete User</md-button>
+</div>

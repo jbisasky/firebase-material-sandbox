@@ -1,0 +1,31 @@
+<h2>User Chat</h2>
+<md-content>
+  <md-list>
+    <md-list-item ng-repeat='post in vmc.chat'>
+      <div layout='column'>
+        <strong>{{post.data.name}}:</strong> {{post.data.message}}
+      </div>
+    </md-list-item>
+  </md-list>
+
+  <form ng-submit='vmc.postChat()'>
+    <div>
+      <md-input-container>
+        <label>Name</label>
+        <md-select ng-model='vmc.name'>
+          <md-option ng-repeat='user in vmc.savedUsers' value={{user.data.name}}>
+            {{user.data.name}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+    <div>
+      <md-input-container>
+        <label>Message</label>
+        <input ng-model='vmc.message' type='text'>
+      </md-input-container>
+    </div>
+    <md-button type='submit'>Submit</md-button>
+
+
+</md-content>
